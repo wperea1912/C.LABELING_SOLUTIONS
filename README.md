@@ -1,33 +1,70 @@
-# C Labeling Solutions — sitio web inicial
+# C Labeling Solutions — plantilla web editable
 
-Sitio estático adaptable (HTML, CSS y JavaScript), preparado para publicarse en Cloudflare Pages.
+Plantilla corporativa estática con diseño responsive, navegación por secciones, tarjetas editables, formulario de contacto y gráficos de muestra. Lista para abrir localmente y publicar en GitHub Pages.
 
-## Archivos
-- `index.html`: estructura y contenido.
-- `styles.css`: identidad visual y diseño responsive.
-- `script.js`: menú móvil, año automático y formulario vía correo.
+## Vista previa local
 
-## Probar localmente
-Abre `index.html` en un navegador. Para desarrollo, también puedes abrir la carpeta con Visual Studio Code y usar una extensión de servidor local.
+1. Descarga y descomprime el ZIP.
+2. Abre `index.html` en Chrome, Edge o Firefox.
+3. Para una vista previa más fiable, abre la carpeta en Visual Studio Code y utiliza la extensión **Live Server**.
 
-## Publicar gratuitamente en Cloudflare Pages
-1. Crea una cuenta gratuita en GitHub y un repositorio nuevo, por ejemplo `cls-website`.
-2. Sube los tres archivos (`index.html`, `styles.css`, `script.js`) a la raíz del repositorio.
-3. En Cloudflare, entra a Workers & Pages → Create → Pages → Connect to Git.
-4. Selecciona el repositorio. Como es un sitio estático, deja el comando de compilación vacío y usa `/` como directorio de salida.
-5. Publica. Cloudflare asignará una dirección `*.pages.dev`.
+No requiere Node.js, instalación ni compilación. La página funciona con HTML, CSS y JavaScript estándar.
 
-## Conectar clabelingsolutions.com.mx
-En Cloudflare Pages abre el proyecto → Custom domains → Set up a custom domain y sigue las instrucciones DNS que te indique Cloudflare. No cambies los nameservers ni registros actuales del dominio sin verificar dónde está alojado el correo y quién administra el DNS. El registro del dominio se sigue pagando al registrador; Pages no incluye el dominio.
+## Personalización en 5 minutos
 
-## Antes de publicar (importante)
-- Confirmar el correo `contacto@clabelingsolutions.com.mx` y sustituirlo en `script.js` y `index.html` si corresponde.
-- Añadir teléfono y enlace real de WhatsApp.
-- Sustituir ilustraciones gráficas por fotografías propias autorizadas de máquinas, refacciones, taller y proyectos.
-- Confirmar nombres de marcas y servicios que CLS puede ofrecer.
-- Añadir aviso de privacidad y datos fiscales/comerciales si se capturan datos de clientes.
-- El formulario abre el programa de correo del visitante mediante `mailto:`; no almacena ni envía datos automáticamente. Para recepción sin depender del correo del visitante, conectar posteriormente un servicio de formularios.
-- El diseño utiliza Google Fonts desde internet; si se desea independencia total de terceros, retirar la importación y usar tipografías del sistema.
+Abre `js/config.js`. Desde ahí puedes editar:
+- Nombre, correo, teléfono, ubicación y WhatsApp.
+- Colores corporativos.
+- Imagen del encabezado y de Nosotros.
+- Titulares y descripciones.
+- Servicios y sectores que aparecen como tarjetas.
 
-## Dominio y correo
-El dominio `clabelingsolutions.com.mx` no se registra ni renueva con este paquete. Mantener el proveedor actual del dominio y correo. Cloudflare Pages puede alojar el sitio sin costo en el plan gratuito; el dominio propio tiene costo de registro/renovación.
+Para cambios visuales más profundos, abre `css/styles.css`. Las variables de color, tipografías, ancho y espaciados están al principio del archivo.
+
+## Estructura
+
+```text
+c_labeling_solutions_web/
+├── index.html
+├── README.md
+├── css/
+│   └── styles.css
+├── js/
+│   ├── config.js
+│   └── main.js
+└── assets/
+    ├── images/
+    │   ├── logo.svg
+    │   ├── logo-white.svg
+    │   ├── favicon.svg
+    │   ├── hero-labeling.svg
+    │   ├── about-labeling.svg
+    │   └── quality-pattern.svg
+    └── icons/
+```
+
+## Publicar en GitHub Pages
+
+1. Crea un repositorio en GitHub.
+2. Sube todos los archivos y carpetas a la raíz del repositorio (debe quedar `index.html` en la raíz).
+3. Abre **Settings → Pages**.
+4. En **Build and deployment**, selecciona **Deploy from a branch**.
+5. Selecciona la rama `main` y la carpeta `/ (root)`.
+6. Guarda. GitHub mostrará la URL pública cuando termine el despliegue.
+
+## Antes de hacer pública la página
+
+Este diseño está desarrollado como una propuesta visual cercana a un sitio corporativo terminado. Hay datos de ejemplo que debes confirmar:
+- Cambia `info@example.com`, teléfono y ubicación.
+- Confirma que los servicios e industrias descritos correspondan a la empresa.
+- Reemplaza el logotipo de muestra por el logotipo oficial.
+- Sustituye los gráficos temporales por fotografías reales de productos, materiales, maquinaria y aplicaciones.
+- Añade aviso de privacidad y textos legales que correspondan.
+
+## Formulario
+
+El formulario prepara un correo mediante `mailto:`; no guarda ni envía información a una base de datos. Para recibir solicitudes directamente en la web, se debe conectar un servicio de formularios o backend.
+
+## Importante sobre el contenido
+
+Los textos de servicios e industrias son contenido inicial editable y deben validarse con la empresa antes de publicar. No se han inventado certificaciones, clientes, cifras, direcciones ni promesas de cumplimiento.
