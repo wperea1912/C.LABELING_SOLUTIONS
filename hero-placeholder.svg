@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
-<defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#193b55"/><stop offset="1" stop-color="#071522"/></linearGradient><pattern id="p" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M0 54V0h54" fill="none" stroke="#75c8c0" stroke-opacity=".12"/></pattern></defs>
-<rect width="1600" height="900" fill="url(#g)"/><rect width="1600" height="900" fill="url(#p)"/>
-<g opacity=".35" fill="none" stroke="#18a6a0" stroke-width="3"><path d="M800 0v900M1000 0v900M1200 0v900M1400 0v900"/><path d="M700 180h900M700 360h900M700 540h900M700 720h900"/></g>
-<g transform="translate(930 230)" opacity=".8"><rect x="0" y="0" width="440" height="420" rx="18" fill="#f4f7f8" opacity=".12" stroke="#fff" stroke-opacity=".4"/><rect x="52" y="55" width="336" height="310" rx="9" fill="#fff" opacity=".12"/><path d="M85 110h260M85 150h220M85 190h260M85 230h180" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".5"/><g fill="#18a6a0"><rect x="85" y="275" width="9" height="55"/><rect x="105" y="260" width="5" height="70"/><rect x="120" y="270" width="12" height="60"/><rect x="145" y="250" width="6" height="80"/><rect x="165" y="267" width="10" height="63"/><rect x="188" y="250" width="5" height="80"/><rect x="205" y="260" width="13" height="70"/><rect x="230" y="250" width="6" height="80"/><rect x="250" y="270" width="9" height="60"/></g></g>
-<circle cx="1260" cy="175" r="95" fill="#f2a900" opacity=".12"/>
-</svg>
