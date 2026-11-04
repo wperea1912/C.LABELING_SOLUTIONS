@@ -1,72 +1,70 @@
-# C Labeling Solutions — sitio web
+# C Labeling Solutions — plantilla web editable
 
-Sitio web corporativo estático, adaptable a móviles y listo para publicar con **GitHub Pages**.
+Plantilla corporativa estática con diseño responsive, navegación por secciones, tarjetas editables, formulario de contacto y gráficos de muestra. Lista para abrir localmente y publicar en GitHub Pages.
 
-## 1. Estructura del proyecto
+## Vista previa local
+
+1. Descarga y descomprime el ZIP.
+2. Abre `index.html` en Chrome, Edge o Firefox.
+3. Para una vista previa más fiable, abre la carpeta en Visual Studio Code y utiliza la extensión **Live Server**.
+
+No requiere Node.js, instalación ni compilación. La página funciona con HTML, CSS y JavaScript estándar.
+
+## Personalización en 5 minutos
+
+Abre `js/config.js`. Desde ahí puedes editar:
+- Nombre, correo, teléfono, ubicación y WhatsApp.
+- Colores corporativos.
+- Imagen del encabezado y de Nosotros.
+- Titulares y descripciones.
+- Servicios y sectores que aparecen como tarjetas.
+
+Para cambios visuales más profundos, abre `css/styles.css`. Las variables de color, tipografías, ancho y espaciados están al principio del archivo.
+
+## Estructura
 
 ```text
 c_labeling_solutions_web/
-├── index.html                 # Página principal y secciones de navegación
-├── README.md                  # Esta guía
+├── index.html
+├── README.md
 ├── css/
-│   └── styles.css             # Colores, tipografías, diseño y versión móvil
+│   └── styles.css
 ├── js/
-│   ├── config.js              # PERSONALIZA textos, colores, imágenes y contacto
-│   └── main.js                # Funciones del menú, tarjetas y formulario
+│   ├── config.js
+│   └── main.js
 └── assets/
-    ├── images/                # Logotipo, hero, imágenes y favicon
-    └── icons/                 # Carpeta disponible para iconos adicionales
+    ├── images/
+    │   ├── logo.svg
+    │   ├── logo-white.svg
+    │   ├── favicon.svg
+    │   ├── hero-labeling.svg
+    │   ├── about-labeling.svg
+    │   └── quality-pattern.svg
+    └── icons/
 ```
 
-## 2. Personalización rápida
+## Publicar en GitHub Pages
 
-Abre `js/config.js`. Es el archivo principal para modificar:
+1. Crea un repositorio en GitHub.
+2. Sube todos los archivos y carpetas a la raíz del repositorio (debe quedar `index.html` en la raíz).
+3. Abre **Settings → Pages**.
+4. En **Build and deployment**, selecciona **Deploy from a branch**.
+5. Selecciona la rama `main` y la carpeta `/ (root)`.
+6. Guarda. GitHub mostrará la URL pública cuando termine el despliegue.
 
-- **Textos:** título principal, descripción y texto de Nosotros.
-- **Colores:** modifica los valores de `colors` en formato HEX.
-- **Contacto:** agrega correo, teléfono y ubicación reales.
-- **Soluciones:** cambia, agrega o elimina elementos del arreglo `solutions`.
-- **Industrias:** cambia, agrega o elimina elementos del arreglo `industries`.
-- **Imágenes:** actualiza las rutas en el objeto `images`.
+## Antes de hacer pública la página
 
-También puedes editar directamente `css/styles.css` para cambiar tipografías, tamaños, espacios, bordes, sombras y comportamiento visual.
+Este diseño está desarrollado como una propuesta visual cercana a un sitio corporativo terminado. Hay datos de ejemplo que debes confirmar:
+- Cambia `info@example.com`, teléfono y ubicación.
+- Confirma que los servicios e industrias descritos correspondan a la empresa.
+- Reemplaza el logotipo de muestra por el logotipo oficial.
+- Sustituye los gráficos temporales por fotografías reales de productos, materiales, maquinaria y aplicaciones.
+- Añade aviso de privacidad y textos legales que correspondan.
 
-### Cambiar fotografías
+## Formulario
 
-1. Coloca tus imágenes en `assets/images/`.
-2. Actualiza la ruta correspondiente en `js/config.js`.
-3. Para la imagen principal utiliza `images.hero`; para Nosotros, `images.about`.
-4. Para el logotipo utiliza `images.logo`.
+El formulario prepara un correo mediante `mailto:`; no guarda ni envía información a una base de datos. Para recibir solicitudes directamente en la web, se debe conectar un servicio de formularios o backend.
 
-Los archivos SVG incluidos son **marcadores visuales temporales**, no fotografías ni el logotipo oficial de la empresa.
+## Importante sobre el contenido
 
-## 3. Publicar en GitHub Pages
-
-1. Inicia sesión en GitHub y crea un repositorio nuevo, por ejemplo `c-labeling-solutions`.
-2. Sube el contenido de esta carpeta al nivel raíz del repositorio. `index.html` debe quedar en la raíz.
-3. En el repositorio entra a **Settings → Pages**.
-4. En **Build and deployment**, elige **Deploy from a branch**.
-5. Selecciona la rama `main` y la carpeta `/ (root)`, y guarda.
-6. Espera a que GitHub publique el sitio. La dirección aparecerá en la misma sección de Pages.
-
-Cada vez que edites y subas cambios a los archivos, GitHub Pages actualizará la página.
-
-## 4. Antes de publicar
-
-- Reemplaza el correo `info@example.com` y el teléfono de ejemplo.
-- Verifica que los servicios e industrias descritos correspondan realmente a C Labeling Solutions.
-- Sustituye el logotipo y las imágenes temporales por material autorizado de la empresa.
-- Agrega enlaces a redes sociales si se necesitan.
-- Revisa el contenido en teléfono y computadora.
-
-## 5. Formulario de contacto
-
-El formulario actual prepara un mensaje usando la aplicación de correo del visitante (`mailto:`). No almacena ni envía información por sí solo. Para recibir formularios directamente desde la página, conecta un proveedor de formularios o implementa un backend y actualiza la función en `js/main.js`.
-
-## 6. Notas técnicas
-
-- No requiere instalación, compilación ni dependencias.
-- Es HTML, CSS y JavaScript estándar.
-- Los estilos son responsivos y el menú se adapta a pantallas pequeñas.
-- Los textos de tarjetas se insertan con escape de HTML para evitar interpretar contenido como marcado.
-- Google Fonts se carga desde internet; si prefieres no depender de ese servicio, elimina el `@import` de `css/styles.css` y usa fuentes del sistema.
+Los textos de servicios e industrias son contenido inicial editable y deben validarse con la empresa antes de publicar. No se han inventado certificaciones, clientes, cifras, direcciones ni promesas de cumplimiento.

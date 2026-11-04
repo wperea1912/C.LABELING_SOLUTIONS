@@ -1,10 +1,12 @@
-# Imágenes del sitio
+# Imágenes
 
-Reemplaza los archivos de esta carpeta por fotografías y gráficos propios o con licencia de uso.
+Los SVG incluidos son gráficos temporales de muestra para que el sitio tenga una apariencia completa desde el primer momento.
 
-- `logo.svg`: logotipo. Puedes reemplazarlo por PNG, SVG o WebP y actualizar `images.logo` en `js/config.js`.
-- `hero-placeholder.svg`: imagen/fondo principal. Sustitúyela por una fotografía horizontal de buena resolución y actualiza `images.hero`.
-- `about-placeholder.svg`: imagen de la sección Nosotros. Actualiza `images.about` si cambias el nombre.
-- `favicon.svg`: icono de la pestaña del navegador.
+Reemplaza por fotografías reales de la empresa:
+- `hero-labeling.svg`: imagen panorámica principal.
+- `about-labeling.svg`: fotografía para la sección Nosotros.
+- `quality-pattern.svg`: textura gráfica para la sección Calidad.
+- `logo.svg` y `logo-white.svg`: logotipo en fondos claros y oscuros.
+- `favicon.svg`: icono del navegador.
 
-Recomendación: usa imágenes WebP optimizadas. Para el hero, una imagen horizontal de 1600 × 900 px funciona bien.
+Puedes usar imágenes JPG, PNG o WebP. Actualiza las rutas en `js/config.js` cuando cambies nombres o extensiones.
