@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720">
+<defs><linearGradient id="wall" x2="1" y2="1"><stop stop-color="#dce8e5"/><stop offset="1" stop-color="#a9c3bf"/></linearGradient><linearGradient id="machine" x2="1"><stop stop-color="#71888b"/><stop offset=".5" stop-color="#e6eeee"/><stop offset="1" stop-color="#71888b"/></linearGradient></defs>
+<rect width="900" height="720" fill="url(#wall)"/>
+<path d="M0 570h900v150H0z" fill="#9aafb0"/>
+<rect x="95" y="115" width="710" height="430" rx="18" fill="#10283f"/>
+<rect x="130" y="150" width="640" height="360" rx="8" fill="url(#machine)"/>
+<rect x="180" y="190" width="240" height="270" rx="6" fill="#f4f7f6"/>
+<rect x="455" y="190" width="260" height="130" rx="6" fill="#183b50"/>
+<path d="M485 230h200M485 265h150" stroke="#20b2a8" stroke-width="8" stroke-linecap="round"/>
+<rect x="455" y="345" width="260" height="115" rx="6" fill="#e8efed"/>
+<g transform="translate(495 370)" fill="#10283f"><rect width="7" height="65"/><rect x="15" width="4" height="65"/><rect x="27" width="11" height="65"/><rect x="48" width="5" height="65"/><rect x="63" width="8" height="65"/><rect x="81" width="4" height="65"/><rect x="95" width="12" height="65"/><rect x="118" width="6" height="65"/><rect x="135" width="9" height="65"/><rect x="155" width="5" height="65"/></g>
+<circle cx="300" cy="330" r="65" fill="#20b2a8" opacity=".2"/><circle cx="300" cy="330" r="37" fill="#10283f"/><circle cx="300" cy="330" r="18" fill="#e9ad48"/>
+<path d="M70 590h760" stroke="#fff" stroke-opacity=".5" stroke-width="4"/>
+</svg>
