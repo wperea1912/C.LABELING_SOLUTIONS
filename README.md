@@ -1,33 +1,72 @@
-# C Labeling Solutions — sitio web inicial
+# C Labeling Solutions — sitio web
 
-Sitio estático adaptable (HTML, CSS y JavaScript), preparado para publicarse en Cloudflare Pages.
+Sitio web corporativo estático, adaptable a móviles y listo para publicar con **GitHub Pages**.
 
-## Archivos
-- `index.html`: estructura y contenido.
-- `styles.css`: identidad visual y diseño responsive.
-- `script.js`: menú móvil, año automático y formulario vía correo.
+## 1. Estructura del proyecto
 
-## Probar localmente
-Abre `index.html` en un navegador. Para desarrollo, también puedes abrir la carpeta con Visual Studio Code y usar una extensión de servidor local.
+```text
+c_labeling_solutions_web/
+├── index.html                 # Página principal y secciones de navegación
+├── README.md                  # Esta guía
+├── css/
+│   └── styles.css             # Colores, tipografías, diseño y versión móvil
+├── js/
+│   ├── config.js              # PERSONALIZA textos, colores, imágenes y contacto
+│   └── main.js                # Funciones del menú, tarjetas y formulario
+└── assets/
+    ├── images/                # Logotipo, hero, imágenes y favicon
+    └── icons/                 # Carpeta disponible para iconos adicionales
+```
 
-## Publicar gratuitamente en Cloudflare Pages
-1. Crea una cuenta gratuita en GitHub y un repositorio nuevo, por ejemplo `cls-website`.
-2. Sube los tres archivos (`index.html`, `styles.css`, `script.js`) a la raíz del repositorio.
-3. En Cloudflare, entra a Workers & Pages → Create → Pages → Connect to Git.
-4. Selecciona el repositorio. Como es un sitio estático, deja el comando de compilación vacío y usa `/` como directorio de salida.
-5. Publica. Cloudflare asignará una dirección `*.pages.dev`.
+## 2. Personalización rápida
 
-## Conectar clabelingsolutions.com.mx
-En Cloudflare Pages abre el proyecto → Custom domains → Set up a custom domain y sigue las instrucciones DNS que te indique Cloudflare. No cambies los nameservers ni registros actuales del dominio sin verificar dónde está alojado el correo y quién administra el DNS. El registro del dominio se sigue pagando al registrador; Pages no incluye el dominio.
+Abre `js/config.js`. Es el archivo principal para modificar:
 
-## Antes de publicar (importante)
-- Confirmar el correo `contacto@clabelingsolutions.com.mx` y sustituirlo en `script.js` y `index.html` si corresponde.
-- Añadir teléfono y enlace real de WhatsApp.
-- Sustituir ilustraciones gráficas por fotografías propias autorizadas de máquinas, refacciones, taller y proyectos.
-- Confirmar nombres de marcas y servicios que CLS puede ofrecer.
-- Añadir aviso de privacidad y datos fiscales/comerciales si se capturan datos de clientes.
-- El formulario abre el programa de correo del visitante mediante `mailto:`; no almacena ni envía datos automáticamente. Para recepción sin depender del correo del visitante, conectar posteriormente un servicio de formularios.
-- El diseño utiliza Google Fonts desde internet; si se desea independencia total de terceros, retirar la importación y usar tipografías del sistema.
+- **Textos:** título principal, descripción y texto de Nosotros.
+- **Colores:** modifica los valores de `colors` en formato HEX.
+- **Contacto:** agrega correo, teléfono y ubicación reales.
+- **Soluciones:** cambia, agrega o elimina elementos del arreglo `solutions`.
+- **Industrias:** cambia, agrega o elimina elementos del arreglo `industries`.
+- **Imágenes:** actualiza las rutas en el objeto `images`.
 
-## Dominio y correo
-El dominio `clabelingsolutions.com.mx` no se registra ni renueva con este paquete. Mantener el proveedor actual del dominio y correo. Cloudflare Pages puede alojar el sitio sin costo en el plan gratuito; el dominio propio tiene costo de registro/renovación.
+También puedes editar directamente `css/styles.css` para cambiar tipografías, tamaños, espacios, bordes, sombras y comportamiento visual.
+
+### Cambiar fotografías
+
+1. Coloca tus imágenes en `assets/images/`.
+2. Actualiza la ruta correspondiente en `js/config.js`.
+3. Para la imagen principal utiliza `images.hero`; para Nosotros, `images.about`.
+4. Para el logotipo utiliza `images.logo`.
+
+Los archivos SVG incluidos son **marcadores visuales temporales**, no fotografías ni el logotipo oficial de la empresa.
+
+## 3. Publicar en GitHub Pages
+
+1. Inicia sesión en GitHub y crea un repositorio nuevo, por ejemplo `c-labeling-solutions`.
+2. Sube el contenido de esta carpeta al nivel raíz del repositorio. `index.html` debe quedar en la raíz.
+3. En el repositorio entra a **Settings → Pages**.
+4. En **Build and deployment**, elige **Deploy from a branch**.
+5. Selecciona la rama `main` y la carpeta `/ (root)`, y guarda.
+6. Espera a que GitHub publique el sitio. La dirección aparecerá en la misma sección de Pages.
+
+Cada vez que edites y subas cambios a los archivos, GitHub Pages actualizará la página.
+
+## 4. Antes de publicar
+
+- Reemplaza el correo `info@example.com` y el teléfono de ejemplo.
+- Verifica que los servicios e industrias descritos correspondan realmente a C Labeling Solutions.
+- Sustituye el logotipo y las imágenes temporales por material autorizado de la empresa.
+- Agrega enlaces a redes sociales si se necesitan.
+- Revisa el contenido en teléfono y computadora.
+
+## 5. Formulario de contacto
+
+El formulario actual prepara un mensaje usando la aplicación de correo del visitante (`mailto:`). No almacena ni envía información por sí solo. Para recibir formularios directamente desde la página, conecta un proveedor de formularios o implementa un backend y actualiza la función en `js/main.js`.
+
+## 6. Notas técnicas
+
+- No requiere instalación, compilación ni dependencias.
+- Es HTML, CSS y JavaScript estándar.
+- Los estilos son responsivos y el menú se adapta a pantallas pequeñas.
+- Los textos de tarjetas se insertan con escape de HTML para evitar interpretar contenido como marcado.
+- Google Fonts se carga desde internet; si prefieres no depender de ese servicio, elimina el `@import` de `css/styles.css` y usa fuentes del sistema.
