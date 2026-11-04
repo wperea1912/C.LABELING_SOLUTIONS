@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dceaf5"/><stop offset="1" stop-color="#6e91b0"/></linearGradient></defs>
+<rect width="1200" height="700" fill="url(#g)"/>
+<g fill="none" stroke="#0756a5" stroke-width="12" opacity=".55">
+<path d="M180 540h850M280 540V190h65v350M345 230h390v45H345M735 250v235h-50V250"/>
+<circle cx="810" cy="330" r="95"/><circle cx="810" cy="330" r="35"/>
+<path d="M180 490h850M250 490v-90h80v90M430 490V360h80v130M970 490V380h55v110"/>
+</g>
+<g fill="#06376b" font-family="Arial,sans-serif" text-anchor="middle"><text x="600" y="625" font-size="30" letter-spacing="8">AGREGA TU FOTOGRAFÍA INDUSTRIAL</text></g>
+</svg>
