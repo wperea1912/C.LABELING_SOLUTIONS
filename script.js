@@ -43,7 +43,7 @@ const carouselConfig = {
 const images = [
 
    
-    "imagenes/estrellas.jpeg",
+    "imagenes/Estrellas.jpeg",
 
     "imagenes/Sinfin.jpeg",
 
