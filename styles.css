@@ -4,3 +4,261 @@
 @media(max-width:950px){.main-nav{gap:17px}.hero-layout{grid-template-columns:1fr 1fr}.hero-visual{margin-right:-30px}.service-grid{grid-template-columns:repeat(2,1fr)}.specialty-grid{gap:45px}.contact-grid{gap:45px}}
 @media(max-width:720px){.container{width:min(100% - 36px,560px)}.topline-inner{height:30px;font-size:8px}.topline-inner span:last-child{display:none}.site-header{height:70px}.brand-mark{width:40px;height:40px}.menu-toggle{display:flex;flex-direction:column;gap:5px;padding:10px}.menu-toggle span{display:block;width:23px;height:2px;background:var(--navy)}.main-nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:20px 24px 25px;box-shadow:0 15px 20px #092b4c15;flex-direction:column;align-items:stretch;gap:0}.main-nav.open{display:flex}.main-nav>a{padding:13px 0;border-bottom:1px solid #edf1f4}.main-nav .nav-cta{margin-top:12px;padding:13px 15px;border:0}.hero-layout{display:flex;flex-direction:column;align-items:stretch;padding-top:40px;min-height:auto}.hero-copy{padding:10px 0 5px}.hero h1{font-size:clamp(43px,12vw,61px);margin:23px 0 18px}.hero-lead{font-size:14px}.hero-actions{align-items:flex-start;flex-direction:column;gap:17px}.hero-proof{margin-top:30px}.hero-visual{margin:12px -8px 0}.visual-coordinate{right:0;font-size:8px}.hero-bottom{font-size:7px}.section-pad{padding:72px 0}.intro-grid,.specialty-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.intro-text{padding-top:0}.section-heading,.approach-head{display:block}.section-heading>p,.approach-head>p{margin-top:22px}.service-grid{grid-template-columns:1fr}.service-card{min-height:340px}.service-card p{min-height:0}.specialty-grid{gap:48px}.specialty-stamp{right:-5px}.specialty-copy h2{font-size:46px}.steps{grid-template-columns:1fr 1fr;row-gap:20px}.step{padding-right:12px}.project-grid{grid-template-columns:1fr}.tile-art,.tile-large .tile-art{height:220px}.cta-inner{display:block}.cta-inner .btn{margin-top:28px}.contact-form{padding:24px 18px}.form-row{grid-template-columns:1fr;gap:0}.footer-main{flex-wrap:wrap;gap:18px}.footer-main>p{width:100%;order:3}.footer-top{font-size:8px}.footer-bottom{font-size:8px;gap:10px;flex-direction:column}.section-kicker{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* ==========================================
+   C LABELING SOLUTIONS
+   ESTILOS DEL CARRUSEL
+   ========================================== */
+/* CONFIGURACION GENERAL */
+
+.carousel-section {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 545px;
+
+    overflow: hidden;
+    border-radius: 12px;
+
+    background: #152B43;
+}
+
+/* CONTENEDOR DE IMAGENES */
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* CADA IMAGEN */
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    pointer-events: none;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+/* DEGRADADO PARA MEJOR LEGIBILIDAD */
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 25, 42, 0.80) 0%,
+        rgba(10, 25, 42, 0.35) 55%,
+        rgba(10, 25, 42, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+/* TEXTO DEL CARRUSEL */
+
+.carousel-content {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: white;
+}
+
+.carousel-label {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #D9A441;
+    margin-bottom: 18px;
+}
+
+.carousel-content h2 {
+    font-size: clamp(30px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 0 0 18px;
+    font-weight: 700;
+    color: #E3EAF0;
+}
+
+.carousel-content p {
+    font-size: clamp(15px, 2vw, 20px);
+    line-height: 1.6;
+    margin: 0;
+    color: #E3EAF0;
+}
+
+/* BOTONES DE NAVEGACION */
+
+.carousel-btn {
+    position: absolute;
+
+    z-index: 4;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.18);
+
+    color: white;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #E87525;
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+/* INDICADORES INFERIORES */
+
+.carousel-indicators {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.55);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    width: 30px;
+    background: #E87525;
+}
+
+/* ==========================================
+   TABLETS
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .carousel-container {
+        height: 420px;
+        border-radius: 8px;
+    }
+
+    .carousel-content {
+        left: 7%;
+        right: 7%;
+        max-width: 85%;
+    }
+
+    .carousel-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .carousel-btn.prev {
+        left: 10px;
+    }
+
+    .carousel-btn.next {
+        right: 10px;
+    }
+
+}
+
+/* ==========================================
+   TELEFONOS
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .carousel-container {
+        height: 350px;
+        border-radius: 5px;
+    }
+
+    .carousel-content {
+        left: 8%;
+        right: 8%;
+    }
+
+    .carousel-content h2 {
+        font-size: 30px;
+    }
+
+    .carousel-content p {
+        font-size: 14px;
+    }
+
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .carousel-indicators {
+        bottom: 15px;
+    }
+
+}

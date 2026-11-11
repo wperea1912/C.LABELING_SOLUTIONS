@@ -31,6 +31,53 @@
   </header>
 
   <main>
+
+<!-- ==========================================
+     C LABELING SOLUTIONS
+     CARRUSEL DE IMAGENES
+     ========================================== -->
+<section class="carousel-section">
+    <div class="carousel-container">
+        <!-- Contenedor de imágenes -->
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Las imágenes se generan automáticamente
+                 desde JavaScript --></div>
+        <!-- Capa de degradado opcional -->
+        <div class="carousel-overlay"></div>
+        <!-- Texto opcional -->
+        <div class="carousel-content">
+            <span class="carousel-label">
+                C LABELING SOLUTIONS | DESDE 2007
+            </span>
+            <h2>Ingeniería que transforma.</h2><p>
+                Soluciones industriales, manufactura
+                y automatización.  </p>
+        </div>
+        <!-- Botón anterior -->
+        <button class="carousel-btn prev"
+                id="prevBtn"
+                aria-label="Imagen anterior">
+            &#10094;
+        </button>
+        <!-- Botón siguiente -->
+        <button class="carousel-btn next"
+                id="nextBtn"
+                aria-label="Imagen siguiente">
+            &#10095;
+        </button>
+        <!-- Indicadores -->
+        <div class="carousel-indicators"
+             id="carouselIndicators">
+        </div>
+    </div>
+</section>
+<!-- Archivos CSS y JavaScript -->
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+
+
+<!--Seccion 1-->
     <section class="hero" id="inicio">
       <div class="hero-grid"></div>
       <div class="container hero-layout">
@@ -59,15 +106,14 @@
     <section class="services section-pad" id="servicios">
       <div class="container">
 
-
         <!--SECCION 2 CAPACIDADES-->
         <div class="section-heading"><div><div class="section-kicker">02 / CAPACIDADES</div><h2>FABRICAMOS SOLUCIONES<br><span><p style="color: #087fb5">NO SOLO REFACCIONES.</p></span></h2></div><p>Un enfoque multidisciplinario para atender los desafíos mecánicos, eléctricos y de control de tu maquinaria.</p></div>
         <div class="service-grid">
           <article class="service-card"><div class="service-number">01</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/operador.png" whidth="100" height="100" alt="" aria-hidden="true"></div>
           </div><h3>Fabricación y maquinado</h3><p style="font-size: 13px; text-align: justify;">Fabricación de piezas, refacciones especiales y componentes de precisión mediante procesos convencionales y CNC.</p><ul><li style="font-size: 11px;">►  MAQUINADO CNC</li><li style="font-size: 11px;">►  TORNO Y FRESADORA CONVENCIONAL</li><li style="font-size: 11px;">►  INGENIERÍA INVERSA Y ADAPTACIÓN</li></ul><a href="especialidades.html" aria-label="Consultar fabricación y maquinado">↗</a></article>
-          <article class="service-card featured"><div class="service-number">02</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/montaje.png" width="100" height="100" alt="" aria-hidden="true"></div></div><h3>Automatización industrial</h3><p style="font-size: 13px; text-align: justify; ">Actualización e integración de sistemas de control para mejorar la operación y el desempeño de maquinaria.</p><ul><li style="font-size: 11px;" >PROGRAMACION PLC Y HMI</li><li style="font-size: 11px;" >SERVOMOTORES Y MOTION CONTROL</li><li style="font-size: 11px;" >INSTALACIONES Y SISTEMAS ELECTRICOS</li></ul><a href="especialidades.html" aria-label="Consultar automatización industrial">↗</a></article>
-          <article class="service-card"><div class="service-number">03</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/mecanico.png " width="100" height="100" alt="" aria-hidden="true"></div></div><h3>Servicio a etiquetadoras</h3><p style="font-size: 13px; text-align: justify; ">Diagnóstico, mantenimiento y modificaciones mecánicas y eléctricas en equipos de etiquetado industrial.</p><ul><li style="font-size: 11px;">INSPECCION Y DIAGNOSTICO</li><li  style="font-size: 11px;">REPARACION Y AJUSTE MECANICO</li><li style="font-size: 11px;" >INSTALACION Y PUESTA EN MARCHA</li></ul><a href="servicios.html" aria-label="Consultar servicio técnico">↗</a></article>
-          <article class="service-card"><div class="service-number">04</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/diseno-grafico.png" width="100" height="100" alt="" aria-hidden="true"></div></div><h3>Diseño e ingeniería</h3><p style="font-size: 13px; text-align: justify; ">Desarrollo de soluciones a la medida, desde el concepto y diseño hasta la fabricación e integración.</p><ul><li style="font-size: 11px;">DISEÑO CAD</li><li style="font-size: 11px;">DESARROLLO DE MECANISMOS</li><li style="font-size: 11px;">DOCUMENTACION TECNICA</li></ul><a href="especialidades.html"aria-label="Consultar diseño e ingeniería">↗</a></article>
+          <article class="service-card featured"><div class="service-number">02</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/montaje.png" width="100" height="100" alt="" aria-hidden="true"></div></div><h3>Automatización industrial</h3><p style="font-size: 13px; text-align: justify; ">Actualización e integración de sistemas de control para mejorar la operación y el desempeño de maquinaria.</p><ul><li style="font-size: 11px;" >►  PROGRAMACION PLC Y HMI</li><li style="font-size: 11px;" >►  SERVOMOTORES Y MOTION CONTROL</li><li style="font-size: 11px;" >►  INSTALACION Y SISTEMAS ELECTRICOS</li></ul><a href="especialidades.html" aria-label="Consultar automatización industrial">↗</a></article>
+          <article class="service-card"><div class="service-number">03</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/mecanico.png " width="100" height="100" alt="" aria-hidden="true"></div></div><h3>Servicio a etiquetadoras</h3><p style="font-size: 13px; text-align: justify; ">Diagnóstico, mantenimiento y modificaciones mecánicas y eléctricas en equipos de etiquetado industrial.</p><ul><li style="font-size: 11px;">► INSPECCION Y DIAGNOSTICO</li><li  style="font-size: 11px;">► REPARACION Y AJUSTE MECANICO</li><li style="font-size: 11px;" >► INSTALACION Y PUESTA EN MARCHA</li></ul><a href="servicios.html" aria-label="Consultar servicio técnico">↗</a></article>
+          <article class="service-card"><div class="service-number">04</div><div class="service-icon"><div style="text-align: center;"><img src="imagenes/diseno-grafico.png" width="100" height="100" alt="" aria-hidden="true"></div></div><h3>Diseño e ingeniería</h3><p style="font-size: 13px; text-align: justify; ">Desarrollo de soluciones a la medida, desde el concepto y diseño hasta la fabricación e integración.</p><ul><li style="font-size: 11px;">► DISEÑO CAD</li><li style="font-size: 11px;">► DESARROLLO DE MECANISMOS</li><li style="font-size: 11px;">► DOCUMENTACION TECNICA</li></ul><a href="especialidades.html"aria-label="Consultar diseño e ingeniería">↗</a></article>
         </div>
       </div>
     </section>
@@ -102,7 +148,7 @@
     <!--Seccion 5 Experiencia en campo-->
     <section class="projects section-pad" id="proyectos">
       <div class="container">
-        <div class="section-heading"><div><div class="section-kicker">05 / EXPERIENCIA EN CAMPO</div><h2>Ingeniería que se<br><span style="color: #087fb5">convierte en resultados.</span></h2></div><p>Una selección de áreas de trabajo que podemos documentar con fotografías de proyectos reales de CLS.</p></div>
+        <div class="section-heading"><div><div class="section-kicker">05 / EXPERIENCIA EN CAMPO</div><h2>Ingeniería que se<br><span style="color: #087fb5">convierte en resultados.</span></h2></div><p style="font-size: 14px; text-align: justify;">Nuestra experiencia se construye en campo.<br>CLS comienza en 2007, atendendiendo desafíos industriales con soluciones a la medida. Desde una refacción especializada hasta el diseño, fabricación, maquinado, integración y modernización de sistemas mecanicos y de  control</p></div>
         <div class="project-grid">
           <div class="project-tile tile-large"><div class="tile-art art-machine"></span> <img src="imagenes/Pedro planta.png" width="300" height="250" alt="" aria-hidden="true" > <span class="art-core"></span><span class="art-caption">ROTARY LABELING</span></div><div class="tile-info"><span>01 / MAQUINARIA</span><h3>Etiquetadoras industriales</h3><p>Servicio, ajustes y modernización.</p></div></div>
           <div class="project-tile tile-large"><div class="tile-art art-cnc"> <img src="imagenes/Presicion.jpeg" width="280" height="250" alt="" aria-hidden="true"  > <span class="art-caption" style="color: aliceblue;">PRECISION MACHINING</span></div><div class="tile-info"><span>02 / MANUFACTURA</span><h3>Componentes de precisión</h3><p>Fabricación y refacciones.</p></div></div>
