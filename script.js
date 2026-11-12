@@ -43,11 +43,24 @@ const carouselConfig = {
 const images = [
 
    
-    "imagenes/Estrellas.jpeg",
-
-    "imagenes/Sinfin.jpeg",
+    
+    "imagenes/Botella.jpeg",
 
     "imagenes/Instalacion.jpeg",
+
+    "imagenes/Etiquetadora1.jpeg",
+    
+    "imagenes/Sensor.jpeg",
+
+    "imagenes/Sacmi.jpeg",
+
+    "imagenes/Krones.jpeg",
+
+    "imagenes/8000S.jpeg",
+
+    "imagenes/Guante.jpeg",
+
+    "imagenes/Estrellas.jpeg",
 
 ];
 // ==========================================
