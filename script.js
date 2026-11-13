@@ -52,7 +52,7 @@ const images = [
     
     "imagenes/Sensor.jpeg",
 
-    "imagenes/Sacmi.jpeg",
+    "imagenes/Linea.jpeg",
 
     "imagenes/Krones.jpeg",
 
